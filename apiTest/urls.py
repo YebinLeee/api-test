@@ -19,5 +19,10 @@ import mapAPI.views as m
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', m.home, name='home')
+    path('', m.home, name='home'),
+    path('location/', m.location, name='location'),
+    path('location/jusoPopup/', m.jusoPopup, name='jusoPopup'),
+    path('keyword/', m.keyword, name='keyword'),
+    path('category/', m.category, name='category'),
+    path('click/', m.clickmarker, name='clickmarker')
 ]
