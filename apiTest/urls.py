@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import mapAPI.views as m
+import account.views as a
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +25,8 @@ urlpatterns = [
     path('location/jusoPopup/', m.jusoPopup, name='jusoPopup'),
     path('keyword/', m.keyword, name='keyword'),
     path('category/', m.category, name='category'),
-    path('click/', m.clickmarker, name='clickmarker')
+    path('click/', m.clickmarker, name='clickmarker'),
+    path('login/', a.login, name='login'),
+    path('post_write/', a.post_write, name='post_write'),
+    path('post_list/', a.post_list, name='post_list')
 ]
